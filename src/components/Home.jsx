@@ -8,10 +8,10 @@ import {
 } from "react-icons/fa";
 
 const images = [
-  "src/assets/healthy1.jpg",
-  "src/assets/healthy2.jpg",
-  "src/assets/healthy3.jpg",
-  "src/assets/healthy4.jpg",
+  "/healthy1.jpg",
+  "/healthy2.jpg",
+  "/healthy3.jpg",
+  "/healthy4.jpg",
 ];
 
 const getRandomImage = () => {
@@ -25,7 +25,7 @@ const Home = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setHeroImage(getRandomImage());
-    }, 5000); // Change image every 5 seconds
+    }, 3000); // Change image every 5 seconds
 
     return () => clearInterval(interval);
   }, []);

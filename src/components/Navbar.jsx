@@ -228,6 +228,7 @@
 import React, { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { FaBars, FaTimes, FaChevronDown } from "react-icons/fa";
+import logo from "../assets/logo.png";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -260,17 +261,12 @@ const Navbar = () => {
       className={`fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:border-gray-600 shadow-md transition-colors duration-300 ${
         isHomePage && !scrolling
           ? "   bg-opacity-30 backdrop-blur-lg"
-          : // : "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500"
-            "bg-gray-800"
+          : "bg-gray-800"
       }`}
     >
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-            src="src/assets/logo.png"
-            className="h-8"
-            alt="NutriGuide Logo"
-          />
+          <img src={logo} className="h-8" alt="NutriGuide Logo" />
           <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
             NutriGuide
           </span>

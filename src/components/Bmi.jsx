@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { FaWeight } from "react-icons/fa";
 import { GiBodyHeight } from "react-icons/gi";
-
+import normal from "../assets/normal.jpg";
+import under from "../assets/under.jpg";
+import over from "../assets/over.jpg";
+import obese from "../assets/obese.jpg";
+import bmiChart from "../assets/bmi.png";
 const Bmi = () => {
   const [weight, setWeight] = useState("");
   const [height, setHeight] = useState("");
@@ -40,13 +44,13 @@ const Bmi = () => {
   const getBodyImage = () => {
     switch (bodyType) {
       case "underweight":
-        return "src/assets/under.jpg";
+        return under;
       case "normal":
-        return "src/assets/normal.jpg";
+        return normal;
       case "overweight":
-        return "src/assets/over.jpg";
+        return over;
       case "obesity":
-        return "src/assets/obese.jpg";
+        return obese;
       default:
         return "";
     }
@@ -199,7 +203,7 @@ const Bmi = () => {
           </div>
           <div className="mt-6 flex justify-center">
             <img
-              src="src/assets/bmi.png"
+              src={bmiChart}
               alt="BMI Chart"
               className=" object-cover rounded-lg shadow-2xl"
             />

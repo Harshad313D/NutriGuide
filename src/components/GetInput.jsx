@@ -347,7 +347,7 @@ const GetInput = () => {
       <div className="w-full  h-full flex items-center justify-center ">
         <img
           className="w-full relative object-cover"
-          src="https://img.freepik.com/free-photo/tasty-pizza-near-ingredients_23-2147772080.jpg?t=st=1724924687~exp=1724928287~hmac=def573255dc0d049d0db9700a92d9d5f2c1cf6cb25a7bd824f557072e10eb1e9&w=1380"
+          src="https://img.freepik.com/free-photo/crop-plate-with-salad_23-2147753678.jpg?t=st=1724962127~exp=1724965727~hmac=c7ab0028c1878b7f32bfc1916609ceb7a1a53ec6217293a33b1d1f985f7def09&w=1380"
           alt=""
           style={{
             height: 750,

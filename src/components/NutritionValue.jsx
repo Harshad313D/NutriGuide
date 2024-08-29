@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { FaSearch, FaUtensils } from "react-icons/fa";
 import backgroundImage from "../assets/bg.jpg";
+import { MdBlurCircular } from "react-icons/md";
 
 const NutritionValue = () => {
   const [mealName, setMealName] = useState("");
@@ -20,7 +21,7 @@ const NutritionValue = () => {
           params: {
             query: mealName,
             number: 1,
-            apiKey: "b9656d3027f34790bda512e9eff71166",
+            apiKey: import.meta.env.VITE_API_KEY,
           },
         }
       );
@@ -35,7 +36,7 @@ const NutritionValue = () => {
         `https://api.spoonacular.com/recipes/${recipeId}/nutritionWidget.json`,
         {
           params: {
-            apiKey: "b9656d3027f34790bda512e9eff71166",
+            apiKey: import.meta.env.VITE_API_KEY,
           },
         }
       );
@@ -79,27 +80,27 @@ const NutritionValue = () => {
 
   return (
     <div
-      className="min-h-screen mt-14 flex flex-col items-center p-6  "
+      className="min-h-screen mt-14 flex flex-col items-center p-2  "
       style={{
         backgroundImage: `url(${backgroundImage})`,
         backgroundPosition: "center",
         // backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
-        backgroundAttachment: "fixed",
       }}
     >
-      <div className="w-full max-w-3xl flex flex-col items-center bg-transperent rounded-2xl  p-8 mb-10">
-        <h2 className="text-3xl font-extrabold text-yellow-300 mb-6 text-center">
-          {/* <FaUtensils className="mr-3 text-purple-500" /> */}
+      <div className="w-full max-w-3xl flex flex-col items-center  rounded-2xl px-10 mt-40">
+        {/* <div className="absolute lg:w-7/12 w-full px-10 my-10"> */}
+
+        <h2 className="text-3xl p-6 font-extrabold text-yellow-300 mb-6 text-center">
           Find Nutrition by Meal Name
         </h2>
-        <div className="relative">
+        <div className="relative w-full flex justify-center items-center">
           <input
             type="text"
             value={mealName}
             onChange={(e) => setMealName(e.target.value)}
             placeholder="Enter meal name..."
-            className="w-96 p-4 pl-12 border-0 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-900"
+            className="w-8/12 p-4 pl-12 border-0 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-900"
           />
           <FaSearch className="absolute top-1/2 left-4 transform -translate-y-1/2 text-gray-400" />
         </div>
@@ -119,8 +120,9 @@ const NutritionValue = () => {
           <div className="mt-6 text-center text-red-500">Error: {error}</div>
         )}
       </div>
+
       {nutritionData && (
-        <div className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="w-full max-w-7xl mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {Object.entries(categorizeNutrients(nutritionData.nutrients)).map(
             ([category, nutrients], index) => (
               <div key={index}>

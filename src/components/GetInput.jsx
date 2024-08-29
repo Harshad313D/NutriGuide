@@ -315,7 +315,8 @@ const mealsData = {
 const GetInput = () => {
   const [condition, setCondition] = useState("");
   const [recommendations, setRecommendations] = useState([]);
-  const [noResult, setNoResult] = useState(false);
+  const [noResult, setNoResult] = useState(true);
+  const [showImage, setShowImage] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const openModal = () => setIsModalOpen(true);
@@ -333,53 +334,97 @@ const GetInput = () => {
     if (lowerCaseMealsData[trimmedCondition]) {
       setRecommendations(lowerCaseMealsData[trimmedCondition]);
       setNoResult(false);
+      setShowImage(true);
     } else {
       setRecommendations([]);
       setNoResult(true);
+      setShowImage(false);
     }
   };
 
   return (
-    <div className="min-h-screen bg-green-100 p-6 mt-14 rounded-lg shadow-lg ">
-      <h1 className="text-3xl font-extrabold text-gray-900 mb-6 text-center">
-        Meal Recommendations
-      </h1>
-      <form onSubmit={handleSubmit} className="mb-6 flex flex-col items-center">
-        <input
-          type="text"
-          placeholder="Enter your health condition (e.g., Weight Loss, Heart Health, Diabetes, etc.)"
-          value={condition}
-          onChange={(e) => setCondition(e.target.value)}
-          className="w-full md:w-1/2 p-4 border-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 "
+    <div className="h-full  rounded-lg shadow-lg ">
+      <div className="w-full  h-full flex items-center justify-center ">
+        <img
+          className="w-full relative object-cover"
+          src="https://img.freepik.com/free-photo/tasty-pizza-near-ingredients_23-2147772080.jpg?t=st=1724924687~exp=1724928287~hmac=def573255dc0d049d0db9700a92d9d5f2c1cf6cb25a7bd824f557072e10eb1e9&w=1380"
+          alt=""
+          style={{
+            height: 750,
+          }}
         />
-        <button
-          type="submit"
-          className="mt-4 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 rounded-2xl overflow-hidden text-sm font-medium text-gray-900  group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 "
-        >
-          <span className=" relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-2xl group-hover:bg-opacity-0 ">
-            Get Recommendations
-          </span>
-        </button>
-        {/* standard conditions open */}
-        <div className="">
-          <div
-            onClick={openModal}
-            className="flex items-center cursor-pointer text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out"
+        <div className=" absolute w-8/12 pt-36  px-10 ">
+          <h1 className="text-3xl font-extrabold text-white mb-6 text-center">
+            Meal Recommendations
+          </h1>
+          <form
+            onSubmit={handleSubmit}
+            className="mb-6 flex flex-col items-center"
           >
-            <FaInfoCircle size={14} />
-            <p className=" text-sm">Show Standard Conditions</p>
+            <input
+              type="text"
+              placeholder="Enter your health condition (e.g., Weight Loss, Heart Health, Diabetes, etc.)"
+              value={condition}
+              onChange={(e) => setCondition(e.target.value)}
+              className="w-full md:w-7/12 p-4 border-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 "
+            />
+            <button
+              type="submit"
+              className="mt-4 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 rounded-2xl overflow-hidden text-sm font-medium text-gray-900  group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 "
+            >
+              <span className=" relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-2xl group-hover:bg-opacity-0 ">
+                Get Recommendations
+              </span>
+            </button>
+            {/* standard conditions open */}
+            <div className="">
+              <div
+                onClick={openModal}
+                className="flex items-center cursor-pointer text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out"
+              >
+                <FaInfoCircle size={14} />
+                <p className=" text-sm">Show Standard Conditions</p>
+              </div>
+              <ConditionsModal isOpen={isModalOpen} onClose={closeModal} />
+            </div>
+            {/* standard conditions closed */}
+          </form>
+          <div className="flex flex-col items-center mt-20">
+            {showImage && (
+              <img
+                className="w-25 h-20 mt-6 "
+                src="https://static.wixstatic.com/media/ccfa0a_fe53f90f0cd648aea537ee95106b4680~mv2.gif " // Replace with your image URL
+                alt="Scroll Down"
+              />
+            )}
+            {/* {showImage && (
+              <img
+                className="w-25 h-20 mt-6 "
+                src="src\assets\goDown.gif " // Replace with your image URL
+                alt="Scroll Down"
+              />
+            )} */}
           </div>
-          <ConditionsModal isOpen={isModalOpen} onClose={closeModal} />
         </div>
-        {/* standard conditions closed */}
-      </form>
+      </div>
+
       {noResult ? (
-        <p className="text-gray-600 text-center">
+        <p className="text-gray-400  mt-5  text-md text-center">
           No results found for the entered condition. Please try another
           condition.
         </p>
       ) : (
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 p-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <br />
+          {showImage && (
+            <h2 className="text-2xl font-bold text-center text-black mb-3">
+              Recommended Meals for
+              <span className=" text-indigo-500"> {condition}</span>
+            </h2>
+          )}
+          <br />
+          {/* meals result */}
+
           {recommendations.length > 0 ? (
             recommendations.map((meal, index) => (
               <div
@@ -413,9 +458,7 @@ const GetInput = () => {
               </div>
             ))
           ) : (
-            <p className="text-gray-600 text-center text-lg">
-              {/* No recommendations available for the entered condition. */}
-            </p>
+            <p></p>
           )}
         </div>
       )}

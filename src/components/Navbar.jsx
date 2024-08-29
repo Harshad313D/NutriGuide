@@ -276,7 +276,7 @@ const Navbar = () => {
             type="button"
             className="text-white bg-green-700 hover:bg-green-800 focus:ring-2 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
           >
-            Get Started
+            <Link to="/Login">Get Started</Link>
           </button>
           <button
             data-collapse-toggle="navbar-sticky"
@@ -359,6 +359,14 @@ const Navbar = () => {
                       className="block py-2 px-4 text-gray-900 rounded-lg hover:bg-blue-100 hover:text-green-500"
                     >
                       BMI
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      to="/recipes"
+                      className="block py-2 px-4 text-gray-900 rounded-lg hover:bg-blue-100 hover:text-green-500"
+                    >
+                      Recipes
                     </Link>
                   </li>
                 </ul>

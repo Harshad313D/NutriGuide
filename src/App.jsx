@@ -16,6 +16,8 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import NutritionInfo from "./components/NutritionInfo";
 import Bmi from "./components/Bmi";
+import Recipes from "./components/Recipes";
+import SingleRecipe from "./components/SingleRecipe";
 
 const App = () => {
   return (
@@ -34,8 +36,10 @@ const App = () => {
         <Route path="/signup" element={<Signup />} />
         <Route path="/nutrition-info/:id" element={<NutritionInfo />} />
         <Route path="/bmi" element={<Bmi />} />
+        <Route path="/recipes" element={<Recipes />} />
+        <Route path="/SingleRecipe" element={<SingleRecipe />} />
       </Routes>
-      <Footer /> {/* Add Footer */}
+      <Footer />
     </Router>
   );
 };

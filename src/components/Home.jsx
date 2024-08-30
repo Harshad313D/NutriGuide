@@ -40,7 +40,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className=" flex flex-col items-center  bg-white">
+    <div className=" flex flex-col items-center bg-white overflow-hidden">
       {/* Hero Section */}
       <section
         className="relative w-full bg-cover bg-center h-screen"

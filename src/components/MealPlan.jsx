@@ -153,7 +153,8 @@ const MealPlan = () => {
       </div>
 
       {/* Meal Cards */}
-      <h1 className="text-3xl font-bold text-center m-1 ">
+      {/* <div className=" border-t-4 border-b-4 rounded-lg border-green-500"> */}
+      <h1 className="text-3xl font-bold text-center m-1  ">
         Enjoy your todays meal
       </h1>
       <div className="flex flex-wrap justify-center">
@@ -161,6 +162,7 @@ const MealPlan = () => {
           <MealCard key={meal.id} meal={meal} />
         ))}
       </div>
+      {/* </div> */}
 
       {/* Nutritional Information */}
       <div className="max-w-6xl mx-auto p-6 mt-12 bg-green-100 shadow-xl rounded-lg border border-gray-200">

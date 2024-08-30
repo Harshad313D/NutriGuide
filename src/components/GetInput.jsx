@@ -343,8 +343,8 @@ const GetInput = () => {
   };
 
   return (
-    <div className="h-full  rounded-lg shadow-lg ">
-      <div className="w-full  h-full flex items-center justify-center ">
+    <div className="h-full rounded-lg shadow-lg overflow-hidden ">
+      <div className="w-full h-full flex items-center justify-center ">
         <img
           className="w-full relative object-cover"
           src="https://img.freepik.com/free-photo/crop-plate-with-salad_23-2147753678.jpg?t=st=1724962127~exp=1724965727~hmac=c7ab0028c1878b7f32bfc1916609ceb7a1a53ec6217293a33b1d1f985f7def09&w=1380"
@@ -353,8 +353,9 @@ const GetInput = () => {
             height: 750,
           }}
         />
-        <div className=" absolute w-8/12 pt-36  px-10 ">
-          <h1 className="text-3xl font-extrabold text-white mb-6 text-center">
+
+        <div className="absolute w-full sm:w-10/12 md:w-8/12 pt-36 px-4 sm:px-6 md:px-10">
+          <h1 className="text-3xl font-extrabold text-white mb-6 text-center lg:text-white sm:text-green-500 md:text-red-600">
             Meal Recommendations
           </h1>
           <form
@@ -366,24 +367,24 @@ const GetInput = () => {
               placeholder="Enter your health condition (e.g., Weight Loss, Heart Health, Diabetes, etc.)"
               value={condition}
               onChange={(e) => setCondition(e.target.value)}
-              className="w-full md:w-7/12 p-4 border-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 "
+              className="w-full sm:w-10/12 md:w-7/12 p-4 border-2 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400"
             />
             <button
               type="submit"
-              className="mt-4 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 rounded-2xl overflow-hidden text-sm font-medium text-gray-900  group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 "
+              className="mt-4 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 rounded-2xl overflow-hidden text-sm font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
             >
-              <span className=" relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-2xl group-hover:bg-opacity-0 ">
+              <span className="relative px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-2xl group-hover:bg-opacity-0">
                 Get Recommendations
               </span>
             </button>
             {/* standard conditions open */}
-            <div className="">
+            <div className="mt-2">
               <div
                 onClick={openModal}
                 className="flex items-center cursor-pointer text-blue-600 hover:text-blue-800 transition duration-300 ease-in-out"
               >
                 <FaInfoCircle size={14} />
-                <p className=" text-sm">Show Standard Conditions</p>
+                <p className="text-sm ml-1">Show Standard Conditions</p>
               </div>
               <ConditionsModal isOpen={isModalOpen} onClose={closeModal} />
             </div>
@@ -392,18 +393,11 @@ const GetInput = () => {
           <div className="flex flex-col items-center mt-20">
             {showImage && (
               <img
-                className="w-25 h-20 mt-6 "
-                src="https://static.wixstatic.com/media/ccfa0a_fe53f90f0cd648aea537ee95106b4680~mv2.gif " // Replace with your image URL
+                className="w-1/2 h-auto mt-6"
+                src="https://static.wixstatic.com/media/ccfa0a_fe53f90f0cd648aea537ee95106b4680~mv2.gif"
                 alt="Scroll Down"
               />
             )}
-            {/* {showImage && (
-              <img
-                className="w-25 h-20 mt-6 "
-                src="src\assets\goDown.gif " // Replace with your image URL
-                alt="Scroll Down"
-              />
-            )} */}
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const Login = () => {
   const [credentials, setCredentials] = useState({ email: "", password: "" });
+  const [alertMessage, setAlertMessage] = useState(""); // Add this line
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -10,7 +11,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle login
+    setAlertMessage("Invalid username or password !");
   };
 
   return (
@@ -61,6 +62,11 @@ const Login = () => {
           </a>
         </p>
       </form>
+      {alertMessage && (
+        <div className="mt-4 p-4 text-red-600 bg-red-100 border border-red-300 rounded">
+          {alertMessage}
+        </div>
+      )}
     </div>
   );
 };

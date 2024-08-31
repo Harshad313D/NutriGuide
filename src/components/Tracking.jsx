@@ -547,6 +547,29 @@ const MealDashboard = () => {
               ))}
           </div>
         </div>
+        {meals[selectedDate] && (
+          <div className="mt-4  border-t-4  p-2 shadow-lg rounded-lg border-blue-500">
+            <h5 className="font-semibold text-indigo-500">
+              Nutritional Breakdown
+            </h5>
+            <p>
+              <strong>Calories:</strong>{" "}
+              {calculateTotals(selectedDate).calories.toFixed(2)}
+            </p>
+            <p>
+              <strong>Fat:</strong>{" "}
+              {calculateTotals(selectedDate).fat.toFixed(2)}
+            </p>
+            <p>
+              <strong>Carbs:</strong>{" "}
+              {calculateTotals(selectedDate).carbs.toFixed(2)}
+            </p>
+            <p>
+              <strong>Protein:</strong>{" "}
+              {calculateTotals(selectedDate).protein.toFixed(2)}
+            </p>
+          </div>
+        )}
       </div>
     </div>
   );

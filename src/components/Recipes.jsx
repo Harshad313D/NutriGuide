@@ -84,7 +84,7 @@ const Recipes = () => {
         />
         <div className="absolute lg:w-7/12 w-full px-10 my-10">
           <h1 class="text-2xl text-center font-bold tracking-tight text-gray-200 md:text-4xl lg:text-6xl my-3">
-            Where Every Meal Tells a Story!
+            Tasty Recipes for Every Occasion!
           </h1>
 
           <form
@@ -115,7 +115,7 @@ const Recipes = () => {
                 type="search"
                 id="default-search"
                 class="block outline-none w-full p-4 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 "
-                placeholder="Search Mockups, Logos..."
+                placeholder="Search Recipes..."
                 required
                 value={searchName}
                 onChange={(e) => {

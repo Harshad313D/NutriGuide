@@ -82,14 +82,14 @@ import {
 
 const Contact = () => {
   return (
-    <section className="mb-32">
+    <section className="mb-32 pt-18">
       {/* Google Map */}
       <div
         id="map"
         className="relative h-[300px] overflow-hidden bg-cover bg-[50%] bg-no-repeat"
       >
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11672.945750644447!2d-122.42107853750231!3d37.7730507907087!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858070cc2fbd55%3A0xa71491d736f62d5c!2sGolden%20Gate%20Bridge!5e0!3m2!1sen!2sus!4v1619524992238!5m2!1sen!2sus"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d222.920725509577!2d75.36721501556043!3d19.865447687386553!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sin!4v1725095304852!5m2!1sen!2sin"
           width="100%"
           height="480"
           style={{ border: "0" }}
@@ -131,11 +131,13 @@ const Contact = () => {
                 </div>
                 <button
                   type="submit"
-                  className="inline-block rounded bg-blue-600 px-7 pb-2 pt-3 text-sm font-medium uppercase leading-normal text-white shadow-[0_4px_9px_-4px_rgba(0,0,0,0.2),0_10px_30px_rgba(0,0,0,0.19)] transition-all duration-150 ease-in-out hover:bg-blue-700 hover:shadow-[0_8px_14px_-4px_rgba(0,0,0,0.2),0_10px_40px_rgba(0,0,0,0.19)] focus:bg-blue-700 focus:shadow-[0_8px_14px_-4px_rgba(0,0,0,0.2),0_10px_40px_rgba(0,0,0,0.19)] focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-[0_8px_14px_-4px_rgba(0,0,0,0.2),0_10px_40px_rgba(0,0,0,0.19)]"
+                  className="mt-4 sm:mt-6 relative inline-flex items-center justify-center p-0.5 mb-2 me-2 rounded-2xl overflow-hidden text-sm sm:text-base font-medium text-gray-900 group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800"
                   data-te-ripple-init
                   data-te-ripple-color="light"
                 >
-                  Send
+                  <span className="relative px-4 sm:px-5 py-2 sm:py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-2xl group-hover:bg-opacity-0">
+                    Send
+                  </span>
                 </button>
               </form>
             </div>
@@ -145,9 +147,9 @@ const Contact = () => {
               <h2 className="text-3xl font-bold mb-6">Contact Information</h2>
               <div className="mb-6">
                 <p className="text-lg font-medium mb-2">
-                  Email: dongardiveharshad313@gmail.com
+                  Email: NutriGuide@gmail.com
                 </p>
-                <p className="text-lg font-medium mb-2">Phone: 8624966429</p>
+                <p className="text-lg font-medium mb-2">Phone: 8624986532</p>
                 <p className="text-lg font-medium">
                   Address: Chhatrapati Sambhaji Nagar-431001
                 </p>

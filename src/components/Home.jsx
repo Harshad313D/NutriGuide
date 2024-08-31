@@ -405,8 +405,9 @@ const Home = () => {
                 <div className="ml-4 text-xl">Get delicious Recipes</div>
               </div>
               <p className="leading-loose text-gray-500 dark:text-gray-200 text-md">
-                Track your health metrics and monitor progress over time with
-                our comprehensive health tracking features.
+                "Discover mouthwatering recipes to satisfy your cravings. From
+                quick meals to indulgent desserts, elevate your cooking with
+                every bite!"
               </p>
             </div>
             <div className="w-full p-8 md:w-1/2 lg:w-1/3 lg:border-r lg:border-b-0 backdrop-blur-sm bg-white/30 border border-white/20 rounded-lg">
@@ -415,8 +416,8 @@ const Home = () => {
                 <div className="ml-4 text-xl">Meal Plans</div>
               </div>
               <p className="leading-loose text-gray-500 dark:text-gray-200 text-md">
-                Receive customized diet plans based on your health goals,
-                dietary restrictions, and personal preferences.
+                Explore curated meal plans tailored to your needs. Simplify your
+                daily meals and enjoy balanced, delicious options every day!.
               </p>
             </div>
           </div>

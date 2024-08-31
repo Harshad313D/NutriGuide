@@ -347,7 +347,7 @@ const GetInput = () => {
       <div className="w-full h-full flex items-center justify-center ">
         <img
           className="w-full relative object-cover"
-          src="https://img.freepik.com/free-photo/crop-plate-with-salad_23-2147753678.jpg?t=st=1724962127~exp=1724965727~hmac=c7ab0028c1878b7f32bfc1916609ceb7a1a53ec6217293a33b1d1f985f7def09&w=1380"
+          src="https://images.unsplash.com/photo-1475762638009-d74671ecd29b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D "
           alt=""
           style={{
             height: 750,
@@ -393,7 +393,7 @@ const GetInput = () => {
           <div className="flex flex-col items-center mt-20">
             {showImage && (
               <img
-                className="w-1/2 h-auto mt-6"
+                className="w-30 h-20 mt-6"
                 src="https://static.wixstatic.com/media/ccfa0a_fe53f90f0cd648aea537ee95106b4680~mv2.gif"
                 alt="Scroll Down"
               />

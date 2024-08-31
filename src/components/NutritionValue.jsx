@@ -130,10 +130,10 @@ const NutritionValue = () => {
             type="text"
             value={mealName}
             onChange={(e) => setMealName(e.target.value)}
-            placeholder="Enter meal name..."
+            placeholder="⌕ Enter meal name ..."
             className="w-10/12 sm:w-9/12 md:w-8/12 p-3 sm:p-4 pl-10 sm:pl-12 border-0 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-900"
           />
-          <FaSearch className="absolute top-1/2 left-8 sm:left-10 transform -translate-y-1/2 text-gray-400" />
+          {/* <FaSearch className="absolute top-1/2 left-8 sm:left-10 transform -translate-y-1/2 text-gray-400" /> */}
         </div>
 
         <button

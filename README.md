@@ -33,6 +33,17 @@ Welcome to **NutriGuide** – your ultimate health companion! This application i
 ### 6. Recipe Finder
 - Search for recipes based on your desired meal and discover new, healthy dishes to try.
 
+
+## Technologies Used
+
+- **React**: Frontend framework.
+- **Vite**: Development server and build tool.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **React Router**: Navigation and routing within the application.
+- **Spoonacular API**: API for retrieving nutritional data and recipes.
+- **FormSubmit**: Form handling for user input and data submission.
+
+
 ## Installation
 
 To run this project locally, follow these steps:
@@ -41,3 +52,7 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/yourusername/nutriguide.git
    cd nutriguide
+
+2. **Install dependencies:**
+3. **Start the development server:**
+

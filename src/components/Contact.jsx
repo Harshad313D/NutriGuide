@@ -149,6 +149,9 @@ const Contact = () => {
                 <p className="text-lg font-medium mb-2">
                   Email: NutriGuide@gmail.com
                 </p>
+                <p className="text-lg font-medium mb-2">
+                  Developer: hdexamples@gmail.com
+                </p>
                 <p className="text-lg font-medium mb-2">Phone: 8624986532</p>
                 <p className="text-lg font-medium">
                   Address: Chhatrapati Sambhaji Nagar-431001

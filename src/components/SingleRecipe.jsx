@@ -90,14 +90,14 @@ const SingelRecipe = () => {
   }, [Data]);
 
   return (
-    <div>
+    <div className="">
       {loading === false ? (
         <div className="w-full ">
           {/* reciepe info */}
 
-          <section class="bg-white flex flex-col items-center ">
+          <section class="bg-white flex flex-col items-center overflow-hidden ">
             <img
-              className="w-full object-cover h-96  "
+              className="w-full h-96 object-cover sm:h-80 md:h-64 lg:h-96 xl:h-auto"
               src="https://images.unsplash.com/photo-1591267789076-2ea305ab92ec?q=80&w=1772&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt=""
               srcset=""
@@ -161,18 +161,18 @@ const SingelRecipe = () => {
                     </div>
                   </div>
                 </div>
-                <div className="w-full pl-4">
-                  <h1 class="max-w-2xl  px-4 mb-4 sm:text-4xl text-2xl font-extrabold tracking-tight leading-none ">
+                <div className="w-full pl-4 sm:pl-2">
+                  <h1 className="max-w-2xl px-4 mb-4 text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-none">
                     {Data.title}
                   </h1>
                   <p
-                    class="mb-2 pl-4   pr-6 py-3 indent-6 text-gray-500 text-justify "
+                    className="mb-2 sm:pl-2 pr-6 py-3 indent-6 text-gray-500 text-justify overflow-hidden"
                     dangerouslySetInnerHTML={{ __html: InfoData.summary }}
                   ></p>
-                  <div class="flex items-center px-3  gap-2">
-                    <div class="flex items-center">
+                  <div className="flex flex-col sm:flex-row items-center px-3 gap-2">
+                    <div className="flex items-center">
                       <svg
-                        class="h-8 w-8 text-yellow-400"
+                        className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-400"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -180,9 +180,8 @@ const SingelRecipe = () => {
                       >
                         <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
                       </svg>
-
                       <svg
-                        class="h-8 w-8 text-yellow-400"
+                        className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-400"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -190,9 +189,8 @@ const SingelRecipe = () => {
                       >
                         <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
                       </svg>
-
                       <svg
-                        class="h-8 w-8 text-yellow-400"
+                        className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-400"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -200,9 +198,8 @@ const SingelRecipe = () => {
                       >
                         <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
                       </svg>
-
                       <svg
-                        class="h-8 w-8 text-yellow-400"
+                        className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-400"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -210,9 +207,8 @@ const SingelRecipe = () => {
                       >
                         <path d="M13.8 4.2a2 2 0 0 0-3.6 0L8.4 8.4l-4.6.3a2 2 0 0 0-1.1 3.5l3.5 3-1 4.4c-.5 1.7 1.4 3 2.9 2.1l3.9-2.3 3.9 2.3c1.5 1 3.4-.4 3-2.1l-1-4.4 3.4-3a2 2 0 0 0-1.1-3.5l-4.6-.3-1.8-4.2Z" />
                       </svg>
-
                       <svg
-                        class="h-8 w-8 text-yellow-400"
+                        className="h-6 w-6 sm:h-8 sm:w-8 text-yellow-400"
                         aria-hidden="true"
                         xmlns="http://www.w3.org/2000/svg"
                         fill="currentColor"
@@ -222,8 +218,12 @@ const SingelRecipe = () => {
                       </svg>
                     </div>
 
-                    <p class="text-lg font-medium text-gray-900 ">5.0</p>
-                    <p class="text-lg font-medium text-gray-500 ">(455)</p>
+                    <p className="text-lg font-medium text-gray-900 sm:text-base">
+                      5.0
+                    </p>
+                    <p className="text-lg font-medium text-gray-500 sm:text-base">
+                      (455)
+                    </p>
                   </div>
                 </div>
 
@@ -304,7 +304,7 @@ const SingelRecipe = () => {
           </section>
 
           {/* Ingredients */}
-          <div className="w-full  flex flex-col items-center justify-center px-4 ">
+          <div className="w-full  flex flex-col items-center justify-center px-4 overflow-hidden ">
             <div className="w-full sm:w-10/12  px-4  flex justify-start ">
               <h2 class="mt-3 lg:text-4xl font-semibold text-gray-900  text-2xl">
                 Ingredients
@@ -339,7 +339,7 @@ const SingelRecipe = () => {
           </div>
 
           {/* Recipe header  */}
-          <section class="bg-white w-full flex justify-center items-center  ">
+          <section class="bg-white w-full flex justify-center items-center overflow-hidden  ">
             <div class="font-light flex  sm:w-10/12 w-full px-4  mt-9 justify-between items-center gap-5 text-gray-500 sm:text-lg ">
               <h2 class="mb-4 sm:text-4xl text-2xl tracking-tight font-extrabold text-gray-900 ">
                 Recipe Steps
@@ -358,7 +358,7 @@ const SingelRecipe = () => {
           </section>
 
           {/* steps  */}
-          <section className="w-full flex flex-col justify-center items-center py-6">
+          <section className="w-full flex flex-col justify-center items-center py-6 overflow-hidden">
             {Steps.map((items) => {
               return (
                 <div className="w-full md:w-10/12 flex flex-col items-center py-4 px-4 text-justify  justify-center">
@@ -376,7 +376,7 @@ const SingelRecipe = () => {
           </section>
 
           {/* similar recipes  */}
-          <section class="bg-white  ">
+          <section class="bg-white overflow-hidden ">
             <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6 ">
               <div class="mx-auto max-w-screen-sm text-center mb-8 lg:mb-16">
                 <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 ">

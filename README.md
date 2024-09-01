@@ -85,15 +85,14 @@ After starting the development server, navigate to `http://localhost:3000` to us
 
 ## Project Structure
 The project is structured as follows:
-/public
+-/public
    /bg images
-/src
+-/src
   /assets - Static assets like images, icons, etc.
   /components - Reusable UI components,pages for different routes (Home, Profile, Recommendations, etc.).
   App.jsx - Main application component.
   index.jsx - Entry point for the React application.
 
-  ##
 
 
 ## Installation

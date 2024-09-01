@@ -81,17 +81,7 @@ After starting the development server, navigate to `http://localhost:3000` to us
 - **Tracking**: Keep track of your daily meals and view insights.
 - **BMI Calculator**: Calculate your BMI and understand your health status.
 - **Recipes**: Search and discover new healthy recipes.
-- 
 
-Directory Structure
-After cloning and installing dependencies, your project directory should look like this:
-```java
--currency-converter/
-           ├── index.html
-           ├── styles.css
-           ├── app.js
-
-```
 
 
 ## Project Structure

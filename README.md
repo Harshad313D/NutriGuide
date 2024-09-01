@@ -52,7 +52,18 @@ To run this project locally, follow these steps:
    ```bash
    git clone https://github.com/yourusername/nutriguide.git
    cd nutriguide
+      ```
+
 
 2. **Install dependencies:**
-3. **Start the development server:**
+   ```
+npm install
+   ``` 
+
+   
+4. **Start the development server:**
+  ```
+npm run dev
+   ```
+
 

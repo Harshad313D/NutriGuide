@@ -62,6 +62,20 @@ To run this project locally, follow these steps:
    
 4. **Start the development server:**
   ```bash
-npm run dev
+npm run dev ```
+
+
+
+## Project Structure
+
+# The project is structured as follows:
+/public
+   /bg images
+/src
+  /assets - Static assets like images, icons, etc.
+  /components - Reusable UI components,pages for different routes (Home, Profile, Recommendations, etc.).
+  App.jsx - Main application component.
+  index.jsx - Entry point for the React application.
+
 
 

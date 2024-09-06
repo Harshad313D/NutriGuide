@@ -315,7 +315,7 @@ const mealsData = {
 const GetInput = () => {
   const [condition, setCondition] = useState("");
   const [recommendations, setRecommendations] = useState([]);
-  const [noResult, setNoResult] = useState(true);
+  const [noResult, setNoResult] = useState(false);
   const [showImage, setShowImage] = useState(false);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -333,6 +333,7 @@ const GetInput = () => {
 
     if (lowerCaseMealsData[trimmedCondition]) {
       setRecommendations(lowerCaseMealsData[trimmedCondition]);
+      console.log("ab", lowerCaseMealsData[trimmedCondition]);
       setNoResult(false);
       setShowImage(true);
     } else {
@@ -403,57 +404,63 @@ const GetInput = () => {
       </div>
 
       {noResult ? (
-        <p className="text-gray-400  mt-5  text-md text-center">
+        <p className="text-gray-400 mt-5  text-md text-center">
           No results found for the entered condition. Please try another
           condition.
         </p>
       ) : (
-        <div className="mt-12 p-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <br />
-          {showImage && (
-            <h2 className="text-2xl font-bold text-center text-black mb-3">
-              Recommended Meals for
-              <span className=" text-indigo-500"> {condition}</span>
-            </h2>
-          )}
-          <br />
-          {/* meals result */}
+        <div
+          className={`w-full   ${
+            recommendations.length > 0 ? "flex " : "hidden"
+          } `}
+        >
+          <div className={` p-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3 `}>
+            <br />
+            {showImage && (
+              <h2 className="text-2xl font-bold text-center text-black mb-3">
+                Recommended Meals for
+                <span className=" text-indigo-500"> {condition}</span>
+              </h2>
+            )}
+            <br />
+            {/* meals result */}
 
-          {recommendations.length > 0 ? (
-            recommendations.map((meal, index) => (
-              <div
-                key={index}
-                className={`p-4 border border-gray-300 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 duration-300 ease-in-out ${
-                  index % 2 === 0
-                    ? "bg-gradient-to-br from-purple-300 to-red-300"
-                    : "bg-gradient-to-br from-blue-300 to-green-300"
-                }`}
-              >
-                <h2 className="text-2xl font-bold text-gray-800 mb-3">
-                  {meal.title}
-                </h2>
-                <div className="space-y-2">
-                  <p className="text-gray-700 font-medium">
-                    Calories:{" "}
-                    <span className="text-red-500">{meal.calories}</span>
-                  </p>
-                  <p className="text-gray-700 font-medium">
-                    Protein:{" "}
-                    <span className="text-green-500">{meal.protein}g</span>
-                  </p>
-                  <p className="text-gray-700 font-medium">
-                    Fat: <span className="text-blue-500">{meal.fat}g</span>
-                  </p>
-                  <p className="text-gray-700 font-medium">
-                    Carbs:{" "}
-                    <span className="text-orange-500">{meal.carbs}g</span>
-                  </p>
+            {recommendations.length > 0 ? (
+              recommendations.map((meal, index) => (
+                <div
+                  key={index}
+                  className={`p-4 border border-gray-300 rounded-lg shadow-lg hover:shadow-2xl transition-transform transform hover:scale-105 duration-300 ease-in-out ${
+                    index % 2 === 0
+                      ? "bg-gradient-to-br from-purple-300 to-red-300"
+                      : "bg-gradient-to-br from-blue-300 to-green-300"
+                  }`}
+                >
+                  <h2 className="text-2xl font-bold text-gray-800 mb-3">
+                    {meal.title}
+                  </h2>
+                  <div className="space-y-2">
+                    <p className="text-gray-700 font-medium">
+                      Calories:{" "}
+                      <span className="text-red-500">{meal.calories}</span>
+                    </p>
+                    <p className="text-gray-700 font-medium">
+                      Protein:{" "}
+                      <span className="text-green-500">{meal.protein}g</span>
+                    </p>
+                    <p className="text-gray-700 font-medium">
+                      Fat: <span className="text-blue-500">{meal.fat}g</span>
+                    </p>
+                    <p className="text-gray-700 font-medium">
+                      Carbs:{" "}
+                      <span className="text-orange-500">{meal.carbs}g</span>
+                    </p>
+                  </div>
                 </div>
-              </div>
-            ))
-          ) : (
-            <p></p>
-          )}
+              ))
+            ) : (
+              <p></p>
+            )}
+          </div>
         </div>
       )}
     </div>

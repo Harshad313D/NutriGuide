@@ -21,7 +21,9 @@ const Footer = () => {
             Privacy Policy
           </a>
         </div> */}
-        <p className="text-sm mt-4 lg:mt-0">Made with ❤️! from India.</p>
+        <p className="text-sm mt-4 lg:mt-0">
+          Made with ❤️ by Harshad Dongardive.
+        </p>
       </div>
     </footer>
   );

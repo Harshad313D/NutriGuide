@@ -220,10 +220,14 @@ const Navbar = () => {
           {/* Get Started button for larger screens */}
           <button
             type="button"
-            className="hidden md:block text-white bg-green-700 hover:bg-green-800 focus:ring-2 focus:outline-none focus:ring-green-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
+            className="hidden md:inline-flex items-center justify-center gap-2
+             bg-transparent border-2 border-green-600 hover:bg-green-700 
+             text-white font-semibold rounded-full text-sm px-6 py-2.5
+             shadow-md hover:shadow-lg transition-all duration-300 transform hover:scale-105"
           >
             <Link to="/Login">Get Started</Link>
           </button>
+
           <button
             data-collapse-toggle="navbar-sticky"
             type="button"
@@ -246,7 +250,7 @@ const Navbar = () => {
           } w-full md:flex md:w-auto md:order-1`}
           id="navbar-sticky"
         >
-          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
             <li>
               <Link
                 to="/"

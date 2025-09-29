@@ -1,43 +1,73 @@
 import React from "react";
+import { FaLeaf, FaAppleAlt, FaHeartbeat } from "react-icons/fa";
 
 const About = () => {
   return (
-    <section className="py-16 mt-20 bg-white">
-      <div className="container mx-auto px-6 text-gray-600 md:px-12 xl:px-6">
-        <h1 className="text-3xl font-extrabold text-center text-gray-900 mb-6">
-          About NutriGuide!
+    <section className="py-20 min-h-screen bg-white">
+      <div className="container mx-auto px-6 md:px-12 xl:px-24 text-gray-700">
+        {/* Heading */}
+        <h1 className="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-12">
+          About{" "}
+          <span className="bg-gradient-to-r from-green-500 via-emerald-500 to-lime-500 text-transparent bg-clip-text">
+            NutriGuide
+          </span>
         </h1>
-        <div className="space-y-6 md:space-y-0 md:flex md:gap-6 lg:items-center lg:gap-12">
-          <div className="md:w-5/12 lg:w-5/12">
+
+        <div className="md:flex md:items-center md:gap-12">
+          {/* Left Image */}
+          <div className="md:w-5/12 mb-8 md:mb-0">
             <img
-              src="https://tailus.io/sources/blocks/left-image/preview/images/startup.png"
-              alt="About Us"
+              src="https://images.pexels.com/photos/109274/pexels-photo-109274.jpeg"
+              alt="NutriGuide"
               loading="lazy"
-              className="w-full h-auto"
+              className="w-full h-auto rounded-xl "
             />
           </div>
-          <div className="md:w-7/12 lg:w-6/12">
-            <h2 className="text-2xl text-gray-900 font-bold md:text-4xl">
-              Empowering Your Health Journey with Personalized Nutrition and
-              Expert Guidance.
+
+          {/* Right Text */}
+          <div className="md:w-7/12">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-6">
+              Empowering Your Health Journey with Personalized Nutrition
             </h2>
-            <p className="mt-6 text-gray-600">
-              At NutriGuide, we're passionate about helping you achieve your
-              health goals through personalized nutrition. Whether you're
-              looking to lose weight, manage a health condition, or simply eat
-              healthier, NutriGuide provides tailored meal recommendations based
-              on your specific needs. Our mission is to empower you with the
-              right nutrition information so you can make informed choices and
-              live a healthier life. We believe that healthy eating should be
-              simple, accessible, and enjoyable for everyone.
+            <p className="text-gray-600 mb-4 leading-relaxed">
+              NutriGuide helps you achieve your health goals with
+              <b>
+                {" "}
+                science-backed meal plans, expert guidance, and easy-to-use
+                tracking tools
+              </b>
+              . Whether your goal is weight management, managing a health
+              condition, or simply improving your nutrition, NutriGuide is
+              tailored for you.
             </p>
-            <p className="mt-4 text-gray-600">
-              NutriGuide offers personalized meal plans, nutritional guidance,
-              and health condition support to help you achieve your wellness
-              goals. Track your meals and progress with our user-friendly app,
-              designed to make healthy eating simple and enjoyable. Let us guide
-              you to better health, one meal at a time.
+            <p className="text-gray-600 mb-6 leading-relaxed">
+              Our mission is to make healthy eating{" "}
+              <b>  accessible, simple, and enjoyable</b> . Track your meals,
+              monitor your progress, and get insights that help you make smarter
+              choices—one meal at a time.
             </p>
+
+            {/* Optional Feature Highlights */}
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
+              <div className="flex flex-col items-center text-center">
+                <FaLeaf className="text-green-500 w-8 h-8 mb-2" />
+                <span className="font-semibold text-gray-900">
+                  Personalized Plans
+                </span>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <FaAppleAlt className="text-red-400 w-8 h-8 mb-2" />
+                <span className="font-semibold text-gray-900">
+                  Healthy Recipes
+                </span>
+              </div>
+              <div className="flex flex-col items-center text-center">
+                <FaHeartbeat className="text-pink-500 w-8 h-8 mb-2" />
+                <span className="font-semibold text-gray-900">
+                  Track Progress
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
